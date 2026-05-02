@@ -1,0 +1,48 @@
+{
+  "name": "rocky-desktop-buddy",
+  "version": "0.1.1",
+  "description": "A persistent sleeping alien desktop buddy for Windows and macOS.",
+  "author": "Rocky Desktop Buddy",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.local.rocky.desktopbuddy",
+    "productName": "Rocky Desktop Buddy",
+    "files": [
+      "src/**/*",
+      "build/**/*",
+      "media/**/*",
+      "body parts/**/*",
+      "rocky.png",
+      "rocky-body-layer.png",
+      "rocky-appendages-layer.png",
+      "rocky-sleep-breathing-64f.png",
+      "rocky-sleep-breathing-64f-preview.gif",
+      "alien-sleep-breathing-contact-sheet.png",
+      "alien-sleep-breathing-preview.gif",
+      "alien-sleep-breathing-16f.png",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.entertainment"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^24.13.3"
+  }
+}

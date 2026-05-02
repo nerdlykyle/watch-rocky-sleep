@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocky Desktop Buddy</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="buddy" aria-label="Sleeping alien desktop buddy">
+      <div id="alien" role="img" aria-label="Sleeping alien"></div>
+      <section id="options-menu" aria-label="Buddy options" hidden>
+        <div class="menu-row">
+          <span>Size</span>
+          <output id="scale-output" for="scale-slider">100%</output>
+        </div>
+        <input id="scale-slider" type="range" min="50" max="100" step="5" value="100" />
+        <label class="menu-toggle">
+          <input id="perch-mode" type="checkbox" />
+          <span>Perch</span>
+        </label>
+        <button id="support-link" class="support-button" type="button" title="Support Rocky development">
+          <span aria-hidden="true">☕</span>
+          <span>Support development</span>
+        </button>
+        <div class="menu-actions">
+          <button id="park-taskbar" type="button">Taskbar edge</button>
+          <button id="park-top" type="button">Top edge</button>
+        </div>
+      </section>
+    </main>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
