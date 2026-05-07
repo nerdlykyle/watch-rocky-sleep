@@ -2,7 +2,7 @@
   "name": "rocky-desktop-buddy",
   "version": "0.1.1",
   "description": "A persistent sleeping alien desktop buddy for Windows and macOS.",
-  "author": "Rocky Desktop Buddy",
+  "author": "Nerdly Kyle",
   "main": "src/main.js",
   "private": true,
   "scripts": {
